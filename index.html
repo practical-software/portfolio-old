@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Sumiye Dev</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Courier+Prime&family=Dancing+Script&family=Noto+Sans+Symbols+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body class="comfortaa">
+    <style>
+
+        .comfortaa{
+            font-family: 'Comfortaa', sans-serif;
+        }
+
+       
+        .gradient-container {
+            position: absolute;
+            z-index:-1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .about-container {
+            position: absolute;
+            z-index:-1;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0e0e0e;
+        }
+        .skills-container{
+            position:absolute;
+            z-index: -1;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            overflow: hidden;
+            background-color: #252525;
+        }
+
+        .moving-gradient {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #d6ab00, #ff6699, #6600ff, #0099cc);
+        background-size: 400% 400%;
+        animation: gradientAnimation 20s ease infinite;
+        }
+
+        .the-top{
+            position: absolute;
+            z-index:10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow:hidden;
+        }
+
+        @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+        }
+
+       
+        .top-1{
+            position:absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .top-2{
+            position:absolute;
+            z-index: 10;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            overflow: hidden;
+        }
+        .top-3{
+            position:absolute;
+            z-index: 10;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            overflow: hidden;
+        }
+
+        .p-skill{
+            max-height: 3.5rem;
+            width: 10rem;
+            border: 1px solid white;
+            border-radius: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .p-skill-long{
+            max-height: 3.5rem;
+            width: 17rem;
+            border: 1px solid white;
+            border-radius: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .h-skill{
+            max-height: 7rem;
+            width: 25rem;
+            border: 1px solid white;
+            border-radius: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+
+    </style>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark comfortaa sticky-top" style="background-color: rgb(120, 0, 248);">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-2 mt-lg-0" href="https://www.practicalsoftware.com/portfolio/index.html">
+                <img src="/images/jsnavbar.png"style="max-height:51px;"alt="Word Dough Logo"/>
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <div class="navbar-nav me-auto">
+              <button class="btn btn-sm ms-2">
+                <div class="nav-item">
+                  <a class="nav-link text-white" href="https://www.practicalsoftware.com/portfolio/about.html">
+                    About Me
+                  </a>
+                </div>
+              </button>
+              <button class="btn btn-sm ms-2">
+                <div class="nav-item">
+                  <a class="nav-link text-white" href="https://www.practicalsoftware.com/portfolio/projects.html">
+                    Projects
+                  </a>
+                </div>
+              </button>
+            </div>
+            <div class="navbar-nav d-flex">
+              
+
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- BOTTOM ELEMENTS -->
+      <div class="gradient-container">
+        <div class="moving-gradient">
+        </div>
+      </div>
+      <!--<div class="about-container"></div>-->
+      <div class="skills-container">
+
+      </div>
+
+
+      <!-- TOP ELEMENTS -->
+      <div class="top-1" style="margin-top: 16rem;">
+        <div id="name" class="text-white">
+            <div class="container">
+                <h1 id="blink" class="" style="font-size: 5rem;">Hey, I'm Justin.</h1>
+                <h2 style="font: 2.5rem;">I'm a junior developer studying computer science at the University of Hawaii at Manoa</h2>
+            </div>
+        </div>
+      </div>
+      <!--
+    <div class="top-2" style="margin-top: 16rem;">
+            <div class="container">
+                <h4 id="terminal" class="" style="font-size: 2rem;">
+                    I am a motivated and experienced student eager to work in the tech industry.
+                    I first started programming
+                </h4>
+                  
+            </div>
+      </div>
+      -->
+      
+      <div class="top-3">
+        <div id="name" class="text-white" style="margin-top: 8rem;">
+            <div class="container">
+               <h1 class="m-3 text-center"><strong>Skills</strong></h1>
+               
+            
+            <div id="proficient">
+                <h3 class="m-1 text-center"> I am proficient in</h3>
+                <div id="" class="mt-5 m-2 d-flex justify-content-center">
+                    <div class="p-2 m-2 p-skill" style="background-color: rgb(228, 142, 14);">HTML</div>
+                    <div class="p-2 m-2 p-skill" style="background-color: rgb(57, 74, 226);">CSS</div>
+                    <div class="p-2 m-2 p-skill" style="background-color: rgb(237, 203, 51);">JS</div>
+               </div>
+                <div class="m-2 d-flex justify-content-center">
+                    <div class="p-2 m-2 p-skill">JQuery</div>
+                    <div class="p-2 m-2 p-skill">BS5</div>
+                    <div class="p-2 m-2 p-skill">Php</div>
+                </div>
+                <div class="m-2 d-flex justify-content-center">
+                    <div class="p-2 m-2 p-skill-long">PhpMyAdmin</div>
+                    <div class="p-2 m-2 p-skill">SFTP</div>
+                </div>
+            </div>
+               
+            <div id="familiar">
+                <h3 class="m-4 text-center text-white">familiar with</h3>
+                <div id="" class="m-2 d-flex justify-content-center">
+                     <div class="p-2 m-2 p-skill">Java</div>
+                     <div class="p-2 m-2 p-skill">MySQL</div>
+                     <div class="p-2 m-2 p-skill">XAMMP</div>
+                </div>
+                <div id="" class="m-2 d-flex justify-content-center">
+                 <div class="p-2 m-2 h-skill" style="font-size: 1.4rem;">Computer Hardware (Building, Repairing, Troubleshooting)</div>
+                </div>
+            </div>
+            <div id="tinkering">
+                <h3 class="m-4 text-center">tinkering with</h3>
+                <div class="m-2 d-flex justify-content-center">
+                    <div class="p-2 m-2 p-skill">Python</div>
+                    <div class="p-2 m-2 p-skill">React</div>
+                </div>
+            </div>
+               
+            </div>
+        </div>
+      </div>
+
+
+
+
+    <script>
+    $(document).ready(function(){
+
+        $("#proficient").fadeOut();
+        $("#familiar").hide();
+        $("#tinkering").hide();
+
+
+        const text = "Hey, I'm Justin.";
+        var currentText = "";
+        var infinite = true;
+        var num = 0;
+
+        async function revealText() {
+            for (var x = 0; x < text.length; x++) {
+                
+            currentText = text.slice(0, x + 1) + "|";
+                if(x==text.length-1){currentText = "Hey, I'm Justin.";}
+
+            $("#blink").text(currentText);
+
+            await new Promise(function (resolve) {
+                setTimeout(function () {
+                resolve();
+                }, 100);
+            });
+
+            
+            }
+        }
+
+        revealText();
+       
+        // Set the desired scroll position
+        var scrollPosition = 700; // Adjust this value based on your needs
+        var profToggled = false;
+        var famToggled = false;
+        var tinkToggled = false;
+
+        function profFadeIn(){
+            
+        }
+
+        // Attach the scroll event listener
+        $(window).scroll(function() {
+            // Check if the scroll position has reached the desired point
+            if ($(this).scrollTop() >= 680) {
+            // Your code to run when scrolled to the desired point
+            console.log("Scrolled to the desired point!");
+            // You can also add your code here to manipulate the targeted element
+            // For example, change its style or content
+            if (!profToggled) {$("#proficient").fadeIn();}
+            profToggled = true;
+            
+            }
+            if ($(this).scrollTop() >= 860) {
+            // Your code to run when scrolled to the desired point
+            console.log("Scrolled to the desired point!");
+            // You can also add your code here to manipulate the targeted element
+            // For example, change its style or content
+            if (!famToggled) {$("#familiar").fadeIn();}
+            famToggled = true;
+            }
+            if ($(this).scrollTop() >= 920) {
+            // Your code to run when scrolled to the desired point
+            console.log("Scrolled to the desired point!");
+            // You can also add your code here to manipulate the targeted element
+            // For example, change its style or content
+            if (!tinkToggled) {$("#tinkering").fadeIn();}
+            tinkToggled = true;
+            }
+        });
+
+    });
+    </script>
+</body>
+</html>

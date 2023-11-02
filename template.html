@@ -9,59 +9,169 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
-<body>
+<body class="comfortaa">
     <style>
 
-        .fixheight{
-
+        .comfortaa{
+            font-family: 'Comfortaa', sans-serif;
         }
+
+       
+        .gradient-container {
+        position: absolute;
+        z-index:-1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        }
+
+        .moving-gradient {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #d6ab00, #ff6699, #6600ff, #0099cc);
+        background-size: 400% 400%;
+        animation: gradientAnimation 20s ease infinite;
+        }
+
+        .the-top{
+            position: absolute;
+            z-index:10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow:hidden;
+        }
+
+        @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+        }
+
+        .terminal-container{
+            position:absolute;
+            z-index: -1;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            overflow: hidden;
+            background-color: #1f1f1f;
+        }
+        .top-1{
+            position:absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .top-2{
+            position:absolute;
+            z-index: 10;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            overflow: hidden;
+            background-color: #1f1f1f;
+        }
+
+        .p-skill{
+            max-height: 3.5rem;
+            width: 10rem;
+            border: 1px solid white;
+            border-radius: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .p-skill-long{
+            max-height: 3.5rem;
+            width: 17rem;
+            border: 1px solid white;
+            border-radius: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .h-skill{
+            max-height: 7rem;
+            width: 25rem;
+            border: 1px solid white;
+            border-radius: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
 
     </style>
     
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container">
-        <!-- Navbar Brand with Image -->
-        <a class="navbar-brand" href="#">
-            <img src="/images/jsnavbar.png" alt="" width="140" height="40" class="d-inline-block align-top">
-        </a>
-
-        <!-- Navbar Toggler Button for Responsive Design -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-sm navbar-dark comfortaa sticky-top" style="background-color: rgb(120, 0, 248);">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-2 mt-lg-0" href="https://www.practicalsoftware.com/worddough/index.html">
+                <img src="/images/jsnavbar.png"style="max-height:51px;"alt="Word Dough Logo"/>
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
-        </button>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <div class="navbar-nav me-auto">
+              <button class="btn btn-sm ms-2">
+                <div class="nav-item">
+                  <a class="nav-link text-white" href="https://www.practicalsoftware.com/portfolio/about.html">
+                    About Me
+                  </a>
+                </div>
+              </button>
+              <button class="btn btn-sm ms-2">
+                <div class="nav-item">
+                  <a class="nav-link text-white" href="https://www.practicalsoftware.com/portfolio/projects.html">
+                    Projects
+                  </a>
+                </div>
+              </button>
+            </div>
+            <div class="navbar-nav d-flex">
+              
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#projects">Projects</a>
-                </li>
-            </ul>
+            </div>
+          </div>
         </div>
-    </div>
-</nav>
+      </nav>
 
-<!-- About Section -->
-<section id="about" class="py-5">
-    <div class="container">
-        <h2 class="text-center">About Me</h2>
-        <p>Your introduction and details about yourself go here.</p>
-    </div>
-</section>
+      
 
-<!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center">Projects</h2>
-        <!-- Add your project details and showcase here -->
-    </div>
-</section>
 
+
+
+    <script>
+    $(document).ready(function(){
+
+    });
+    </script>
 </body>
 </html>
