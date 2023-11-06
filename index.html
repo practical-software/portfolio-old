@@ -18,7 +18,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <script src="https://kit.fontawesome.com/5d0479de92.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="comfortaa">
     <style>
 
@@ -52,10 +54,15 @@
             top: 100%;
             left: 0;
             width: 100%;
-            height: 150%;
+            height: 200%;
             overflow: hidden;
             background-color: #252525;
         }
+        @media (min-width: 396px) {
+            .skills-container {
+                height: 150%;
+            }
+        }       
 
         .moving-gradient {
         width: 100%;
@@ -113,21 +120,12 @@
             left: 0;
             width: 100%;
             height: 150%;
-            overflow: hidden;
+            overflow: shown;
         }
 
         .p-skill{
-            max-height: 3.5rem;
-            width: 10rem;
-            border: 1px solid white;
-            border-radius: 40px;
-            font-weight: bold;
-            text-align: center;
-            font-size: 2rem;
-        }
-        .p-skill-long{
-            max-height: 3.5rem;
-            width: 17rem;
+            max-height: fit-content;
+            width: min-content;
             border: 1px solid white;
             border-radius: 40px;
             font-weight: bold;
@@ -135,14 +133,62 @@
             font-size: 2rem;
         }
         .h-skill{
-            max-height: 7rem;
-            width: 25rem;
+            max-height: fit-content;
+            width: max-content;
             border: 1px solid white;
             border-radius: 40px;
             font-weight: bold;
             text-align: center;
-            font-size: 2rem;
+            font-size: 1rem;
         }
+        @media (min-width: 396px) {
+            .h-skill{
+                font-size: 1.65rem;
+            }
+        }       
+        #transition1-top{
+            position:absolute;
+            z-index: 10;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10%;
+            overflow: hidden;
+        }
+        .blur{
+            filter: blur(10px);
+        }
+        .bs5{
+            background: -webkit-linear-gradient(left,#9c47fc, #6d2de6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .python{
+            background: -webkit-linear-gradient(125deg, #FFD43B 47%, #3776AB 53%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-js{
+            background-image: url('/images/js-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200%; /* This ensures that the background covers the entire viewport height */
+            margin: 0;
+            filter: blur(9px);
+        }
+        @media (min-width: 430px) {
+            .bg-js{
+            background-image: url('/images/js-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150%; /* This ensures that the background covers the entire viewport height */
+            margin: 0;
+            filter: blur(9px);
+        }
+        }       
+        
         
 
     </style>
@@ -186,20 +232,29 @@
         </div>
       </div>
       <!--<div class="about-container"></div>-->
-      <div class="skills-container">
-
+      <div class="skills-container bg-js">
+        <p></p>
       </div>
 
 
       <!-- TOP ELEMENTS -->
-      <div class="top-1" style="margin-top: 16rem;">
-        <div id="name" class="text-white">
+      <div class="top-1">
+        <div id="name" class="text-white" style="margin-top: 17rem;">
             <div class="container">
                 <h1 id="blink" class="" style="font-size: 5rem;">Hey, I'm Justin.</h1>
                 <h2 style="font: 2.5rem;">I'm a junior developer studying computer science at the University of Hawaii at Manoa</h2>
             </div>
         </div>
-      </div>
+        <div style="position: absolute; bottom: 5%; left:50%;"> 
+            <div id="arrow-1" class="d-flex justify-content-center" >
+                <i class="fa-solid fa-chevron-down fa-2xl" style="color: white;"></i>
+            </div>
+        </div>
+       
+    </div>
+    
+
+      
       <!--
     <div class="top-2" style="margin-top: 16rem;">
             <div class="container">
@@ -213,46 +268,98 @@
       -->
       
       <div class="top-3">
-        <div id="name" class="text-white" style="margin-top: 8rem;">
-            <div class="container">
+        <div id="name" class="text-white" style="margin-top: 7rem;">
+         <div class="container-fluid">
                <h1 class="m-3 text-center"><strong>Skills</strong></h1>
                
             
             <div id="proficient">
-                <h3 class="m-1 text-center"> I am proficient in</h3>
-                <div id="" class="mt-5 m-2 d-flex justify-content-center">
-                    <div class="p-2 m-2 p-skill" style="background-color: rgb(228, 142, 14);">HTML</div>
-                    <div class="p-2 m-2 p-skill" style="background-color: rgb(57, 74, 226);">CSS</div>
-                    <div class="p-2 m-2 p-skill" style="background-color: rgb(237, 203, 51);">JS</div>
+                <h3 class=" text-center"> I am proficient in:</h3>
+                <div id="" class="mt-5 m-2 d-flex justify-content-center flex-wrap">
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-html5 d-flex flex-column justify-content-center" style="color: #e36826;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">HTML</p>
+                    </div>
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-css3-alt float-start d-flex flex-column justify-content-center" style="color: #155ca3;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">CSS</p>
+                            
+                    </div>
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-square-js d-flex flex-column justify-content-center" style="color: #F0DB4F; "></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">JavaScript</p>
+                    </div>
                </div>
-                <div class="m-2 d-flex justify-content-center">
-                    <div class="p-2 m-2 p-skill">JQuery</div>
-                    <div class="p-2 m-2 p-skill">BS5</div>
-                    <div class="p-2 m-2 p-skill">Php</div>
+                <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <div class="d-flex flex-column justify-content-center">
+                            <img src="/images/jquery-icon.png" class="" style="max-width:30px; max-height: 30px;"></img>          
+                        </div>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">JQuery</p>
+                    </div>
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-php float-start d-flex flex-column justify-content-center" style="color: #4f6cde;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">PHP</p>
+                            
+                    </div>
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-bootstrap d-flex flex-column justify-content-center bs5" style=""></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">Bootstrap</p>
+                    </div>
+               </div>
+               <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
+                <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                        <img src="/images/phpmyadmin-logo.png" class="" style="max-width:30px; max-height: 30px;"></img>          
+                    </div>
+                    <p class="m-0 ps-2 d-flex flex-column justify-content-center">PhpMyAdmin</p>
                 </div>
-                <div class="m-2 d-flex justify-content-center">
-                    <div class="p-2 m-2 p-skill-long">PhpMyAdmin</div>
-                    <div class="p-2 m-2 p-skill">SFTP</div>
+                <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <i class="fa-solid fa-lock float-start d-flex flex-column justify-content-center" style="color: #dec14f;"></i>
+                    <p class="m-0 ps-2 d-flex flex-column justify-content-center">SFTP</p>
+                        
                 </div>
+           </div>
             </div>
                
             <div id="familiar">
-                <h3 class="m-4 text-center text-white">familiar with</h3>
-                <div id="" class="m-2 d-flex justify-content-center">
-                     <div class="p-2 m-2 p-skill">Java</div>
-                     <div class="p-2 m-2 p-skill">MySQL</div>
-                     <div class="p-2 m-2 p-skill">XAMMP</div>
+                <h3 class="m-4 text-center text-white">familiar with:</h3>
+                <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-java float-start d-flex flex-column justify-content-center" style="color: #F14C4D;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">Java</p>
+                    </div>
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-solid fa-database float-start d-flex flex-column justify-content-center" style="color: #05a4c8;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">MySQL</p>
+                            
+                    </div>
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-solid fa-server d-flex flex-column justify-content-center" style="color: #FFA500;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">XAMMP</p>
+                    </div>
+               </div>
+               <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
+                <div class="m-2 p-1 pe-3 ps-3 h-skill d-flex justify-content-center">
+                    <i class="fa-solid fa-computer float-start d-flex flex-column justify-content-center" style="color: #1fc781;"></i>
+                    <p class="m-0 ps-2 d-flex flex-column justify-content-center">Computer Hardware (Building, Troubleshooting)</p>
                 </div>
-                <div id="" class="m-2 d-flex justify-content-center">
-                 <div class="p-2 m-2 h-skill" style="font-size: 1.4rem;">Computer Hardware (Building, Repairing, Troubleshooting)</div>
+
                 </div>
-            </div>
+                </div>
             <div id="tinkering">
-                <h3 class="m-4 text-center">tinkering with</h3>
-                <div class="m-2 d-flex justify-content-center">
-                    <div class="p-2 m-2 p-skill">Python</div>
-                    <div class="p-2 m-2 p-skill">React</div>
-                </div>
+                <h3 class="m-4 text-center">tinkering with:</h3>
+                <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-python float-start d-flex flex-column justify-content-center python" style="color: #F14C4D;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">Python</p>
+                    </div>
+                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                        <i class="fa-brands fa-react float-start d-flex flex-column justify-content-center" style="color: #61DAFB;"></i>
+                        <p class="m-0 ps-2 d-flex flex-column justify-content-center">React</p>
+                            
+                    </div>
+               </div>
             </div>
                
             </div>
