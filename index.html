@@ -98,7 +98,7 @@
         .top-1{
             position:absolute;
             z-index: 10;
-            top: 0;
+            top: 0%;
             left: 0;
             width: 100%;
             height: 100%;
@@ -110,7 +110,7 @@
             top: 100%;
             left: 0;
             width: 100%;
-            height: 150%;
+            height: 100%;
             overflow: hidden;
         }
         .top-3{
@@ -191,18 +191,10 @@
         #arrow-1{
             cursor: pointer;
         }
-        #hs-div{
-            max-width: 100%;
-            height: auto;
-        }
-        #about-me{
-            width: 42rem;
-        }
-        
 
     </style>
     
-    <nav class="navbar navbar-expand-sm navbar-dark comfortaa sticky-top" style="background-color: rgb(120, 0, 248);">
+    <nav id="my-navbar" class="navbar navbar-expand-md navbar-dark comfortaa fixed-top" style=" background-color: rgb(113, 4, 230);">
         <div class="container-fluid">
             <a class="navbar-brand mt-2 mt-lg-0" href="https://www.practicalsoftware.com/portfolio/index.html">
                 <img src="/images/jsnavbar.png"style="max-height:51px;"alt="Word Dough Logo"/>
@@ -211,17 +203,31 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <div class="navbar-nav me-auto">
-              <button class="btn btn-sm ms-2">
-                <div class="nav-item">
-                  <a class="nav-link text-white" href="https://www.practicalsoftware.com/portfolio/about.html">
+            <div class="navbar-nav me-auto ">
+              <button class="btn">
+                <div id="nav-about" class="nav-item ms-2">
+                  <a class="nav-link text-white">
                     About Me
                   </a>
                 </div>
               </button>
-              <button class="btn btn-sm ms-2">
-                <div class="nav-item">
-                  <a class="nav-link text-white" href="https://www.practicalsoftware.com/portfolio/projects.html">
+              <button class="btn">
+                <div id="nav-skills" class="nav-item ms-2">
+                  <a class="nav-link text-white">
+                    Skills
+                  </a>
+                </div>
+              </button>
+              <button class="btn">
+                <div id="nav-work" class="nav-item ms-2">
+                  <a class="nav-link text-white">
+                    Work Experience
+                  </a>
+                </div>
+              </button>
+              <button class="btn">
+                <div id="nav-projects" class="nav-item ms-2">
+                  <a class="nav-link text-white">
                     Projects
                   </a>
                 </div>
@@ -264,25 +270,22 @@
        
     </div>
     
+     
 
-      
-      
-    <div class="top-2 d-flex justify-content-center" style="margin-top: 16rem;">
-            <div class="container d-flex flex-wrap-reverse">
-                <div class="m-2 ms-5">
-                    <p id="about-me" class="text-white" style="font-size: 1.4rem;">
-                        I began coding at eight with Scratch and LEGO robotics, and my interest grew toward web development. 
-                        I am now proficient in both front-end and back-end development, turning my childhood curiosity into a passion for creating useful websites and software.
-                    </p>
-                </div>
-                <div id="hs-div" class="col m-3">
-                    <img src="/images/mejapan.JPG" style="max-width:20rem;" class=" img-fluid border border-white rounded">
-                </div>
-                
-                
-                  
-            </div>
-      </div>
+    <div class="top-2" style="margin-top: 4rem;">
+         <div class="container d-flex justify-content-center flex-wrap-reverse">
+            <p id="about-me" class="text-white m-2" style="max-width: 25rem;  height: auto;">
+                I began coding at eight with Scratch and LEGO robotics, and my interest grew toward web development. 
+                I am now proficient in both front-end and back-end development, turning my childhood curiosity into a passion for creating useful websites and software.
+            </p>
+            
+            <img src="/images/justinjapan.png" class="m-2" style="max-width: 25rem; max-height: 35%; min-width: 200px; min-height: 200px; height: auto; border: 1px solid #fff; border-radius: 8px;">
+        
+        </div>
+    </div>
+
+    
+    
       
       
       <div class="top-3">
@@ -426,41 +429,75 @@
         var famToggled = false;
         var tinkToggled = false;
 
+        var waitFade = false;
+
         function profFadeIn(){
             
         }
 
         // Attach the scroll event listener
         $(window).scroll(function() {
-            // Check if the scroll position has reached the desired point
-            if ($(this).scrollTop() >= 680) {
-            // Your code to run when scrolled to the desired point
-            console.log("Scrolled to the desired point!1");
-            // You can also add your code here to manipulate the targeted element
-            // For example, change its style or content
-            if (!profToggled) {$("#proficient").fadeIn();}
-            profToggled = true;
+            if(!waitFade){
+                // Check if the scroll position has reached the desired point
+                if ($(this).scrollTop() >= 1300) {
+                    // Your code to run when scrolled to the desired point
+                    //console.log("Scrolled to the desired point!1");
+                    // You can also add your code here to manipulate the targeted element
+                    // For example, change its style or content
+                    if (!profToggled) {$("#proficient").fadeIn();}
+                    profToggled = true;
+                
+                }
+                if ($(this).scrollTop() >= 1600) {
+                    // Your code to run when scrolled to the desired point
+                    //console.log("Scrolled to the desired point!2");
+                    // You can also add your code here to manipulate the targeted element
+                    // For example, change its style or content
+                    if (!famToggled) {$("#familiar").fadeIn();}
+                    famToggled = true;
+                }
+                if ($(this).scrollTop() >= 1900) {
+                    // Your code to run when scrolled to the desired point
+                    //console.log("Scrolled to the desired point!3");
+                    // You can also add your code here to manipulate the targeted element
+                    // For example, change its style or content
+                    if (!tinkToggled) {$("#tinkering").fadeIn();}
+                    tinkToggled = true;
+                }
+            }
             
-            }
-            if ($(this).scrollTop() >= 860) {
-            // Your code to run when scrolled to the desired point
-            console.log("Scrolled to the desired point!2");
-            // You can also add your code here to manipulate the targeted element
-            // For example, change its style or content
-            if (!famToggled) {$("#familiar").fadeIn();}
-            famToggled = true;
-            }
-            if ($(this).scrollTop() >= 920) {
-            // Your code to run when scrolled to the desired point
-            console.log("Scrolled to the desired point!3");
-            // You can also add your code here to manipulate the targeted element
-            // For example, change its style or content
-            if (!tinkToggled) {$("#tinkering").fadeIn();}
-            tinkToggled = true;
-            }
         });
 
         $("#arrow-1").click(function(){
+            $('html, body').animate({
+                scrollTop: $(".about-container").offset().top + 0
+            }, 1000);
+        });
+
+        $("#nav-about").click(function(){
+            $('html, body').animate({
+                scrollTop: $(".about-container").offset().top + 0
+            }, 1000);
+        });
+
+        $("#nav-skills").click(function(){
+            waitFade = true;
+            console.log("WF TRUE");
+            $('html, body').animate({
+                scrollTop: $(".skills-container").offset().top + 0
+            }, 1000, function(){
+                waitFade = false; console.log("WF FALSE");
+            });
+            
+        });
+
+        $("#nav-work").click(function(){
+            $('html, body').animate({
+                scrollTop: $(".about-container").offset().top + 0
+            }, 1000);
+        });
+
+        $("#nav-projects").click(function(){
             $('html, body').animate({
                 scrollTop: $(".about-container").offset().top + 0
             }, 1000);
