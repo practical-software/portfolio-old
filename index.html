@@ -29,7 +29,7 @@
         }
 
        
-        .gradient-container {
+        .gradient-back {
             position: absolute;
             z-index:-1;
             top: 0;
@@ -38,7 +38,7 @@
             height: 100%;
             overflow: hidden;
         }
-        .about-container {
+        .about-back {
             position: absolute;
             z-index:-1;
             top: 100%;
@@ -46,9 +46,9 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: #212121;
+            background-color: #091427;
         }
-        .skills-container{
+        .skills-back{
             position:absolute;
             z-index: -1;
             top: 200%;
@@ -58,16 +58,37 @@
             overflow: hidden;
             background-color: #252525;
         }
-        @media (min-width: 396px) {
-            .skills-container {
-                height: 150%;
-            }
+        @media (min-width: 410px) {
+          
+        }
+        .work-back{
+            position:absolute;
+            z-index: -1;
+            top: 300%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #091427;
+        }
+        .projects-back{
+            position:absolute;
+            z-index: -1;
+            top: 400%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #091427;
+        }
+        @media (min-width: 410px) {
+            
         }       
 
         .moving-gradient {
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #d6ab00, #ff6699, #6600ff, #0099cc);
+            background: linear-gradient(45deg, #d6ab00, #bb4545, #5302cd, #03759b);
             background-size: 400% 400%;
             animation: gradientAnimation 20s ease infinite;
         }
@@ -119,8 +140,33 @@
             top: 200%;
             left: 0;
             width: 100%;
-            height: 150%;
+            height: 100%;
             overflow: shown;
+        }
+        .top-4{
+            position:absolute;
+            z-index: 10;
+            top: 300%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: shown;
+        }
+        .top-5{
+            position:absolute;
+            z-index: 10;
+            top: 400%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: shown;
+        }
+
+        .next-section{
+            position: absolute;
+            bottom: 7%;
+            left:49.8%;
+            cursor: pointer;
         }
 
         .p-skill{
@@ -130,7 +176,7 @@
             border-radius: 40px;
             font-weight: bold;
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
         .h-skill{
             max-height: fit-content;
@@ -139,13 +185,41 @@
             border-radius: 40px;
             font-weight: bold;
             text-align: center;
-            font-size: 1rem;
+            font-size: 1.4rem;
         }
-        @media (min-width: 396px) {
-            .h-skill{
-                font-size: 1.65rem;
-            }
-        }       
+        .skills-label{
+            font-size:1.7rem;
+        }
+        @media (max-width: 655px) {
+            .p-skill{font-size: 1.3rem;}
+            .h-skill{font-size: 1.1rem;}
+            .skills-label{font-size:1.5rem;}
+        }    
+        @media (max-height: 768px){
+            .p-skill{font-size: 1.2rem;}
+            .h-skill{font-size: 1.0rem;}
+            .skills-label{font-size:1.4rem;}
+        }
+        @media (max-width: 480px) {
+            .p-skill{font-size: 1.1em;}
+            .h-skill{font-size: 0.9rem;}
+            .skills-label{font-size:1.25rem;}
+        }    
+        @media (max-height: 700px){
+            .p-skill{font-size: 1.1rem;}
+            .h-skill{font-size: 0.9rem;}
+            .skills-label{font-size:1.25rem;}
+        }
+        @media (max-width: 360px) {
+            .p-skill{font-size: 0.9em;}
+            .h-skill{font-size: 0.7rem;}
+            .skills-label{font-size:1.1rem;}
+        }    
+        @media (max-height: 630px){
+            .p-skill{font-size: 0.9rem;}
+            .h-skill{font-size: 0.7rem;}
+            .skills-label{font-size:1.1rem;}
+        }                    
         #transition1-top{
             position:absolute;
             z-index: 10;
@@ -173,28 +247,242 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 200%; /* This ensures that the background covers the entire viewport height */
+            height: 100%; /* This ensures that the background covers the entire viewport height */
             margin: 0;
             filter: blur(9px);
         }
-        @media (min-width: 430px) {
-            .bg-js{
-                background-image: url('/images/js-background.jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                height: 150%; /* This ensures that the background covers the entire viewport height */
-                margin: 0;
-                filter: blur(9px);
+
+
+        .interest{
+            max-height: fit-content;
+            width: min-content;
+            border: 1px solid white;
+            border-radius: 18px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.4rem;
+            margin: 0.5rem;
+        }
+
+        @media (max-width: 430px) {
+            .interest{
+                max-height: fit-content;
+                width: min-content;
+                border: 1px solid white;
+                border-radius: 18px;
+                font-weight: bold;
+                text-align: center;
+                font-size: 1rem;
+                margin: 0.27rem;
             }
-        }       
-        #arrow-1{
+        }
+
+        #headshot{
+            max-width: 24rem;
+            max-height: 35%;
+            min-width: 170px;
+            min-height: 170px;
+            height: auto;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+        }
+        #about-me-container{
+            margin-top: 6rem;
+        }
+        #about-me-header{
+            font-size: 1.7rem;
+        }
+        #about-me-text{
+            font-size: 1.1rem;
+        }
+        #interest-container{
+            margin-top: 5em;
+        }
+
+        @media (max-width: 991px) {
+            #headshot{
+                max-width: 19rem;
+                max-height: 35%;
+                min-width: 170px;
+                min-height: 170px;
+                height: auto;
+                border: 2px solid #ffffff;
+                border-radius: 8px;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+            #about-me-container{
+                margin-top: 6rem;
+            }
+            #about-me-header{
+                font-size: 1.5rem;
+            }
+            #about-me-text{
+                font-size: 0.9rem;
+            }
+            #interest-container{
+                margin-top: 0.3rem;
+            }
+        }
+        @media (max-width: 780px) {
+            #headshot{
+                max-width: 17rem;
+                max-height: 35%;
+                min-width: 170px;
+                min-height: 170px;
+                height: auto;
+                border: 2px solid #ffffff;
+                border-radius: 8px;
+                
+            }
+            #about-me-container{
+                margin-top: 1rem;
+            }
+            #about-me-header{
+                font-size: 1rem;
+            }
+            #about-me-text{
+                font-size: 0.75rem;
+            }
+            #interest-container{
+                margin-top: 0.2rem;
+            }
+        }
+        @media (max-width: 680px) {
+            #headshot{
+                max-width: 15rem;
+                max-height: 35%;
+            }
+        }
+        @media (max-width: 620px) {
+            #headshot{
+                max-width: 13rem;
+                max-height: 35%;
+            }
+        }
+        @media (max-height: 850px) {
+            .interest{
+                max-height: fit-content;
+                width: min-content;
+                border: 1px solid white;
+                border-radius: 18px;
+                font-weight: bold;
+                text-align: center;
+                font-size: 0.9rem;
+                margin: 0.27rem;
+            }
+            #interest-container{
+                margin-top: 2rem;
+            }
+        }
+
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            background-color: rgb(65, 154, 130); /* Change this to your desired active color */
+            color: #ffffff; /* Change this to your desired text color for the active tab */
+        }
+        
+        .responsive-text {      
+            font-size: 1em;      
+            overflow:hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+        .work-container{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .work-title{
+            font-size: 1.25rem;
+        }
+        .tab-text{
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 1100px) {
+            .responsive-text {font-size: 0.8em;}
+            .work-title{font-size: 1rem;}
+            .tab-text{font-size: 1.2rem;}
+        }
+        @media (max-height: 650px) {
+            .responsive-text {font-size: 0.8em;}
+            .work-title{font-size: 1rem;}
+            .tab-text{font-size: 1.2rem;}
+        }
+        @media (max-width: 1000px) {
+            .responsive-text {font-size: 0.7em;}
+            .work-title{font-size: 0.8rem;}
+            .tab-text{font-size: 0.9rem;}
+        }
+        @media (max-height: 565px) {
+            .responsive-text {font-size: 0.7em;}
+            .work-title{font-size: 0.8rem;}
+            .tab-text{font-size: 0.9rem;}
+        }
+        @media (max-width: 380px) {
+            .responsive-text {font-size: 0.6em;}
+            .work-title{font-size: 0.7rem;}
+            .tab-text{font-size: 0.8rem;}
+        }
+        @media (max-height: 500px) {
+            .responsive-text {font-size: 0.6em;}
+            .work-title{font-size: 0.7rem;}
+            .tab-text{font-size: 0.8rem;}
+        }
+
+        
+        .btn-contact {
+            line-height: 1.8rem;
+            border-radius: 9.5px;
+            display: inline-flex;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            position: relative;
+            background-color: #252B60;
+            color: #f4f4f5;
+            transition: background-color 0.2s ease-in-out;
+            justify-content: center;
+            text-align: center;
             cursor: pointer;
         }
 
+        .btn-contact:hover {
+            background-color: #3A4498;
+        }
+
+        .btn-contact:before {
+            content: "";
+            position: absolute;
+            background: linear-gradient(
+                to right,
+                rgb(0, 220, 130),
+                rgb(54, 228, 218),
+                rgb(22, 167, 158)
+            );
+            inset: -2px;
+            z-index: -1;
+            border-radius: 12.5px;
+            transition: all 0.2s ease 0s;
+        }
+
+        .btn-contact:hover:before {
+            box-shadow: rgba(0, 220, 130, 0.5) 0px 0px 10px 0px,
+                rgba(54, 228, 218, 0.5) 0px 0px 20px 0px;
+        }
+
+        .btn-contact > span {
+            text-align: left;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            word-break: break-all;
+        }
+
+
     </style>
     
-    <nav id="my-navbar" class="navbar navbar-expand-md navbar-dark comfortaa fixed-top" style=" background-color: rgb(113, 4, 230);">
+    <nav id="my-navbar" class="navbar navbar-expand-md navbar-dark comfortaa fixed-top" style=" background-color: #252b60;">
         <div class="container-fluid">
             <a class="navbar-brand mt-2 mt-lg-0" href="https://www.practicalsoftware.com/portfolio/index.html">
                 <img src="/images/jsnavbar.png"style="max-height:51px;"alt="Word Dough Logo"/>
@@ -203,139 +491,187 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <div class="navbar-nav me-auto ">
+            <div class="navbar-nav me-auto d-flex">
               <button class="btn">
                 <div id="nav-about" class="nav-item ms-2">
                   <a class="nav-link text-white">
-                    About Me
+                    <strong>About Me</strong>
                   </a>
                 </div>
               </button>
               <button class="btn">
                 <div id="nav-skills" class="nav-item ms-2">
                   <a class="nav-link text-white">
-                    Skills
+                    <strong>Skills</strong>
                   </a>
                 </div>
               </button>
               <button class="btn">
                 <div id="nav-work" class="nav-item ms-2">
                   <a class="nav-link text-white">
-                    Work Experience
+                    <strong>Work Experience</strong>
                   </a>
                 </div>
               </button>
               <button class="btn">
                 <div id="nav-projects" class="nav-item ms-2">
                   <a class="nav-link text-white">
-                    Projects
+                    <strong>Projects</strong>
                   </a>
                 </div>
               </button>
             </div>
-            <div class="navbar-nav d-flex">
-              
-
+            <div class="flex-grow-1">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-contact me-4">
+                        <div id="nav-contact" class="nav-item">
+                          <a class="nav-link text-white">
+                            <strong>Contact</strong>
+                          </a>
+                        </div>
+                      </button>
+                </div>
             </div>
           </div>
         </div>
       </nav>
 
       <!-- BOTTOM ELEMENTS -->
-      <div class="gradient-container">
+      <div class="gradient-back">
         <div class="moving-gradient">
         </div>
       </div>
-      <div class="about-container">
+      <div class="about-back">
 
       </div>
-      <div class="skills-container bg-js">
-        <p></p>
+      <div class="skills-back bg-js">
+        
       </div>
-
+      <div class="work-back">
+        
+      </div>
+      <div class="projects-back">
+        
+      </div>
+      
 
       <!-- TOP ELEMENTS -->
-      <div class="top-1">
-        <div id="name" class="text-white" style="margin-top: 17rem;">
+      <section class="top-1">
+        <div id="name" class="text-white" style="margin-top: 15rem;">
             <div class="container">
                 <h1 id="blink" class="" style="font-size: 5rem;">Hey, I'm Justin.</h1>
-                <h2 style="font: 2.5rem;">I'm a junior developer studying computer science at the University of Hawaii at Manoa</h2>
+                <h2 style="font: 2.5rem;">I'm a junior full stack developer based in Honolulu, Hawaii</h2>
             </div>
         </div>
-        <div style="position: absolute; bottom: 5%; left:50%;"> 
+        <div class="next-section"> 
             <div id="arrow-1" class="d-flex justify-content-center" >
                 <i class="fa-solid fa-chevron-down fa-2xl" style="color: white;"></i>
             </div>
         </div>
        
-    </div>
+    </section>
     
      
 
-    <div class="top-2" style="margin-top: 4rem;">
-         <div class="container d-flex justify-content-center flex-wrap-reverse">
-            <p id="about-me" class="text-white m-2" style="max-width: 25rem;  height: auto;">
-                I began coding at eight with Scratch and LEGO robotics, and my interest grew toward web development. 
-                I am now proficient in both front-end and back-end development, turning my childhood curiosity into a passion for creating useful websites and software.
-            </p>
-            
-            <img src="/images/justinjapan.png" class="m-2" style="max-width: 25rem; max-height: 35%; min-width: 200px; min-height: 200px; height: auto; border: 1px solid #fff; border-radius: 8px;">
+    <section class="top-2" style="color:#b9f8eb;">
+         <div id=about-me-container class="container-fluid d-flex justify-content-center flex-wrap-reverse">
+            <div>
+                <h3 id="about-me-header" class="m-2">About Me:</h3>
+                <p id="about-me-text" class="m-2" style="max-width: 23rem;  height: auto;">
+                    I began coding at eight with Scratch and LEGO robotics, and I instantly fell in love with computers.
+                    <br><br>
+                    Fast-forward to today, I am experienced in both front-end and back-end development, turning my childhood curiosity into a passion for creating useful websites and software.
+                    <br><br>
+                    Currently, I am studying computer science the University of Hawaii at Manoa with focus in cybersecurity.
+                </p>
+            </div>
+
+            <img src="/images/justinjapan.png" id="headshot" class="m-1">
         
         </div>
-    </div>
+        <div id="interest-container" class="container text-white text-center d-flex flex-column mb-1">
+            <h4 class="">Also Seen Enjoying...</h4>
+            <div class="d-flex justify-content-center flex-wrap">
+                <div class="interest p-1 pe-3 ps-3 d-flex justify-content-center">
+                    <i class="fa-solid fa-bowling-ball d-flex flex-column justify-content-center" style="color: #2694e3;"></i>
+                    <p class="m-0 ps-2 d-flex flex-column justify-content-center">Bowling</p>
+                </div>
+                <div class="interest p-1 pe-3 ps-3 d-flex justify-content-center">
+                    <i class="fa-solid fa-gamepad d-flex flex-column justify-content-center" style="color: #ef6b6b;"></i>
+                    <p class="m-0 ps-2 d-flex flex-column justify-content-center">Gaming</p>
+                </div>
+                <div class="interest p-1 pe-3 ps-3 d-flex justify-content-center">
+                    <i class="fa-solid fa-music d-flex flex-column justify-content-center" style="color: #a42bf9"></i>
+                    <p class="m-0 ps-2 d-flex flex-column justify-content-center">Music</p>
+                </div>
+                <div class="interest p-1 pe-3 ps-3 d-flex justify-content-center">
+                    <i class="fa-solid fa-plane-departure d-flex flex-column justify-content-center" style="color: #befdff"></i>
+                    <p class="m-0 ps-2 d-flex flex-column justify-content-center">Traveling</p>
+                </div>
+            </div>
+        </div>
+
+    <!--
+        <div class="next-section mb-5"> 
+            <div id="arrow-2" class="d-flex justify-content-center" >
+                <i class="fa-solid fa-chevron-down fa-2xl" style="color: white;"></i>
+            </div>
+        </div>
+    -->
+    </section>
 
     
     
       
       
-      <div class="top-3">
-        <div id="name" class="text-white" style="margin-top: 7rem;">
-         <div class="container-fluid">
-               <h1 class="m-3 text-center"><strong>Skills</strong></h1>
+      <section class="top-3">
+        <div id="name" class="text-white" style="margin-top: 5rem; height: 100%;">
+         <div class="container-fluid" style="height: 100%;">
+               <h2 class="m-2 mb-4 text-center"><strong>Skills</strong></h2>
                
             
             <div id="proficient">
-                <h3 class=" text-center"> I am proficient in:</h3>
-                <div id="" class="mt-5 m-2 d-flex justify-content-center flex-wrap">
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                <h3 class="skills-label text-center"> I am proficient in:</h3>
+                <div id="" class="mt-3 m-2 d-flex justify-content-center flex-wrap">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-html5 d-flex flex-column justify-content-center" style="color: #e36826;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">HTML</p>
                     </div>
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-css3-alt float-start d-flex flex-column justify-content-center" style="color: #155ca3;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">CSS</p>
                             
                     </div>
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-square-js d-flex flex-column justify-content-center" style="color: #F0DB4F; "></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">JavaScript</p>
                     </div>
                </div>
                 <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <div class="d-flex flex-column justify-content-center">
                             <img src="/images/jquery-icon.png" class="" style="max-width:30px; max-height: 30px;"></img>          
                         </div>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">JQuery</p>
                     </div>
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-php float-start d-flex flex-column justify-content-center" style="color: #4f6cde;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">PHP</p>
                             
                     </div>
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-bootstrap d-flex flex-column justify-content-center bs5" style=""></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">Bootstrap</p>
                     </div>
                </div>
                <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
-                <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                     <div class="d-flex flex-column justify-content-center">
                         <img src="/images/phpmyadmin-logo.png" class="" style="max-width:30px; max-height: 30px;"></img>          
                     </div>
                     <p class="m-0 ps-2 d-flex flex-column justify-content-center">PhpMyAdmin</p>
                 </div>
-                <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                     <i class="fa-solid fa-lock float-start d-flex flex-column justify-content-center" style="color: #dec14f;"></i>
                     <p class="m-0 ps-2 d-flex flex-column justify-content-center">SFTP</p>
                         
@@ -344,24 +680,24 @@
             </div>
                
             <div id="familiar">
-                <h3 class="m-4 text-center text-white">familiar with:</h3>
+                <h3 class=" skills-label m-2 mt-3 text-center text-white">familiar with:</h3>
                 <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-java float-start d-flex flex-column justify-content-center" style="color: #F14C4D;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">Java</p>
                     </div>
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-solid fa-database float-start d-flex flex-column justify-content-center" style="color: #05a4c8;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">MySQL</p>
                             
                     </div>
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-solid fa-server d-flex flex-column justify-content-center" style="color: #FFA500;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">XAMMP</p>
                     </div>
                </div>
                <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
-                <div class="m-2 p-1 pe-3 ps-3 h-skill d-flex justify-content-center">
+                <div class="m-1 p-1 pe-3 ps-3 h-skill d-flex justify-content-center">
                     <i class="fa-solid fa-computer float-start d-flex flex-column justify-content-center" style="color: #1fc781;"></i>
                     <p class="m-0 ps-2 d-flex flex-column justify-content-center">Computer Hardware (Building, Troubleshooting)</p>
                 </div>
@@ -369,13 +705,13 @@
                 </div>
                 </div>
             <div id="tinkering">
-                <h3 class="m-4 text-center">tinkering with:</h3>
+                <h3 class=" skills-label m-2 mt-3 text-center">tinkering with:</h3>
                 <div id="" class="mt-1 m-2 d-flex justify-content-center flex-wrap">
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-python float-start d-flex flex-column justify-content-center python" style="color: #F14C4D;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">Python</p>
                     </div>
-                    <div class="m-2 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
+                    <div class="m-1 p-1 pe-3 ps-3 p-skill d-flex justify-content-center">
                         <i class="fa-brands fa-react float-start d-flex flex-column justify-content-center" style="color: #61DAFB;"></i>
                         <p class="m-0 ps-2 d-flex flex-column justify-content-center">React</p>
                             
@@ -385,7 +721,202 @@
                
             </div>
         </div>
-      </div>
+      </section>
+      
+      <section class="top-4">
+        
+        <div class="container" style="margin-top: 5rem;" style="height:100%;">
+            
+            <h2 class="text-center mb-4" style="color: #c1ddee">
+                <strong>Work</strong>
+            </h2>
+            <div class="d-flex justify-content-center p-1">
+                <div class="d-flex flex-column work-container border border-2 rounded rounded-3" style="max-width: 50rem;">
+                    <div>
+                        <ul class="nav nav-tabs d-flex" style="font-size: 1.4rem; border-bottom:0;" role="tablist">
+                            <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link active text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
+                                <strong>University of Hawaii</strong>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <i class="fa-solid fa-xmark fa-xs float-start ms-2" style="color: #ffffff;"></i>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="nav-item border-end rounded" style="cursor: pointer;">
+                                <a class="nav-link disabled text-white-50 rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
+                                    N/A
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <i class="fa-solid fa-xmark fa-xs float-start ms-2 text-white-50"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- <li class="nav-item border-end rounded">
+                                <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
+                            </li> -->
+                            <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
+                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                                 style="cursor: pointer;">
+                                    <i class="fa-solid fa-window-minimize fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                                    style="color: #ffffff;"></i>
+                                </li>
+                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                                 style="cursor: pointer;">
+                                    <i class="fa-solid fa-window-restore fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                                    style="color: #ffffff;"></i>
+                                </li>
+                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                                 style="cursor: pointer; background-color: #e04a4a;">
+                                    <i class="fa-solid fa-xmark fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                                    style="color: #ffffff;"></i>
+                                </li>
+                            </div>
+                            
+                        </ul>
+                    </div>
+    
+                    <div class="tab-content mt-0 p-1 border-top border-2" style="color:#c1ddee;">
+                        <div id="work-UHM" class="container tab-pane active"><br>
+                            <h5 class="work-title"><strong>Web Developer - Korean Flagship Center</strong></h5>
+                            <p class="responsive-text"><em>September 2023 - Present</em></p>
+                            <ul class="list-unstyled responsive-text">
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    Implemented updates and additions to the company website using SFTP and WordPress, ensuring seamless user experiences and keeping the online presence current and dynamic.
+                                    <br><br>
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    Developed a web application that automates the creation of decision letters for student applicants. 
+                                    This user-friendly tool generates official decision letters with branded letterhead in PDF format, facilitating a swift and professional communication process with applicants.
+                                    <br><br>
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    Successfully rebuilt the organization's application form through integration with a third-party software, streamlining the submission process for applicants. 
+                                    This enhancement contributed to increased efficiency and a more user-friendly application experience.
+                                </li>
+                              </ul>
+                        </div>
+                        <div id="work-na" class="container tab-pane fade"><br>
+                            <ul class="list-unstyled">
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                      Item 1
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                      Item 1
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                      Item 1
+                                </li>
+                              </ul>
+                        </div>
+                    </div>
+            </div>
+            
+                </div>
+            </div>
+           
+      </section>
+      <section class="top-5">
+        
+        <div class="container" style="margin-top: 5rem;" style="height:100%;">
+            
+            <h2 class="text-center mb-4" style="color: #c1ddee">
+                <strong>Projects</strong>
+            </h2>
+            <div class="d-flex justify-content-center p-1">
+                <div class="d-flex flex-column work-container border border-2 rounded rounded-3" style="max-width: 50rem;">
+                    <div>
+                        <ul class="nav nav-tabs d-flex" style="font-size: 1.4rem; border-bottom:0;" role="tablist">
+                            <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link active text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
+                                <strong>Word Dough</strong>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <i class="fa-solid fa-xmark fa-xs float-start ms-2" style="color: #ffffff;"></i>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="nav-item border-end rounded" style="cursor: pointer;">
+                                <a class="nav-link disabled text-white-50 rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
+                                    N/A
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <i class="fa-solid fa-xmark fa-xs float-start ms-2 text-white-50"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- <li class="nav-item border-end rounded">
+                                <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
+                            </li> -->
+                            <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
+                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                                 style="cursor: pointer;">
+                                    <i class="fa-solid fa-window-minimize fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                                    style="color: #ffffff;"></i>
+                                </li>
+                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                                 style="cursor: pointer;">
+                                    <i class="fa-solid fa-window-restore fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                                    style="color: #ffffff;"></i>
+                                </li>
+                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                                 style="cursor: pointer; background-color: #e04a4a;">
+                                    <i class="fa-solid fa-xmark fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                                    style="color: #ffffff;"></i>
+                                </li>
+                            </div>
+                            
+                        </ul>
+                    </div>
+    
+                    <div class="tab-content mt-0 p-1 border-top border-2" style="color:#c1ddee;">
+                        <div id="work-UHM" class="container tab-pane active"><br>
+                            <h5 class="work-title"><strong>Web Developer - Korean Flagship Center</strong></h5>
+                            <p class="responsive-text"><em>September 2023 - Present</em></p>
+                            <ul class="list-unstyled responsive-text">
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    Implemented updates and additions to the company website using SFTP and WordPress, ensuring seamless user experiences and keeping the online presence current and dynamic.
+                                    <br><br>
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    Developed a web application that automates the creation of decision letters for student applicants. 
+                                    This user-friendly tool generates official decision letters with branded letterhead in PDF format, facilitating a swift and professional communication process with applicants.
+                                    <br><br>
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    Successfully rebuilt the organization's application form through integration with a third-party software, streamlining the submission process for applicants. 
+                                    This enhancement contributed to increased efficiency and a more user-friendly application experience.
+                                </li>
+                              </ul>
+                        </div>
+                        <div id="work-na" class="container tab-pane fade"><br>
+                            <ul class="list-unstyled">
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                      Item 1
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                      Item 1
+                                </li>
+                                <li class="">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                      Item 1
+                                </li>
+                              </ul>
+                        </div>
+                    </div>
+            </div>
+            
+                </div>
+            </div>
+           
+      </section>
 
 
 
@@ -439,7 +970,7 @@
         $(window).scroll(function() {
             if(!waitFade){
                 // Check if the scroll position has reached the desired point
-                if ($(this).scrollTop() >= 1300) {
+                if ($(this).scrollTop() >= 1000) {
                     // Your code to run when scrolled to the desired point
                     //console.log("Scrolled to the desired point!1");
                     // You can also add your code here to manipulate the targeted element
@@ -448,7 +979,7 @@
                     profToggled = true;
                 
                 }
-                if ($(this).scrollTop() >= 1600) {
+                if ($(this).scrollTop() >= 1300) {
                     // Your code to run when scrolled to the desired point
                     //console.log("Scrolled to the desired point!2");
                     // You can also add your code here to manipulate the targeted element
@@ -456,7 +987,7 @@
                     if (!famToggled) {$("#familiar").fadeIn();}
                     famToggled = true;
                 }
-                if ($(this).scrollTop() >= 1900) {
+                if ($(this).scrollTop() >= 1600) {
                     // Your code to run when scrolled to the desired point
                     //console.log("Scrolled to the desired point!3");
                     // You can also add your code here to manipulate the targeted element
@@ -470,13 +1001,19 @@
 
         $("#arrow-1").click(function(){
             $('html, body').animate({
-                scrollTop: $(".about-container").offset().top + 0
+                scrollTop: ($(".about-back").offset().top - $("#my-navbar").height())
+            }, 1000);
+        });
+
+        $("#arrow-2").click(function(){
+            $('html, body').animate({
+                scrollTop: ($(".skills-back").offset().top - $("#my-navbar").height())
             }, 1000);
         });
 
         $("#nav-about").click(function(){
             $('html, body').animate({
-                scrollTop: $(".about-container").offset().top + 0
+                scrollTop: ($(".about-back").offset().top - $("#my-navbar").height())
             }, 1000);
         });
 
@@ -484,7 +1021,7 @@
             waitFade = true;
             console.log("WF TRUE");
             $('html, body').animate({
-                scrollTop: $(".skills-container").offset().top + 0
+                scrollTop: ($(".skills-back").offset().top - $("#my-navbar").height())
             }, 1000, function(){
                 waitFade = false; console.log("WF FALSE");
             });
@@ -493,13 +1030,13 @@
 
         $("#nav-work").click(function(){
             $('html, body').animate({
-                scrollTop: $(".about-container").offset().top + 0
+                scrollTop: ($(".work-back").offset().top - $("#my-navbar").height())
             }, 1000);
         });
 
         $("#nav-projects").click(function(){
             $('html, body').animate({
-                scrollTop: $(".about-container").offset().top + 0
+                scrollTop: $(".about-back").offset().top + 0
             }, 1000);
         });
 
