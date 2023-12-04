@@ -67,11 +67,11 @@
             top: 300%;
             left: 0;
             width: 100%;
-            height:200%;
+            height:250%;
             overflow: hidden;
             background-color: #091427;
         }
-        .projects-back{
+        /* .projects-back{
             position:absolute;
             z-index: -1;
             top: 400%;
@@ -80,7 +80,7 @@
             height: 100%;
             overflow: hidden;
             background-color: #091427;
-        }
+        } */
         @media (min-width: 410px) {
             
         }       
@@ -397,7 +397,7 @@
             font-size: 1.25rem;
         }
         .tab-text{
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
 
         @media (max-width: 1100px) {
@@ -490,6 +490,13 @@
             background-clip: text;
             color: transparent;
             animation: gradientAnimation 5s ease infinite;
+        }
+        .carousel-inner {
+            overflow: hidden;
+        }
+
+        .carousel-inner .carousel-item {
+            transition: transform 0.6s ease-in-out;
         }
 
 
@@ -734,291 +741,326 @@
         </div>
       </section>
       
-      <section class="top-4">
-        
-        <div class="container" style="margin-top: 5rem;" style="height:100%;">
+<section class="top-4">
 
-            
-            <h2 class="text-center mb-4 moving-gradient-header">
-                <strong>Work</strong>
-            </h2>
-            <div class="d-flex justify-content-center m-0 m-md-1 p-0 p-md-1">
-                <div class="d-flex flex-column work-container border border-2 rounded rounded-3" style="max-width: 70%;">
-                    <div>
-                        <ul class="nav nav-tabs d-flex" style="font-size: 1.4rem; border-bottom:0;" role="tablist">
-                            <li class="nav-item flex-grow-1 flex-sm-grow-0" style="cursor: pointer;">
-                            <a class="nav-link active text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
-                                <strong>University of Hawaii</strong>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <i class="fa-solid fa-xmark fa-xs float-start ms-2 d-none d-md-block" style="color: #ffffff;"></i>
-                                </div>
-                            </a>
-                            </li>
-                            <li class="nav-item border-end rounded flex-grow-1 flex-sm-grow-0" style="cursor: pointer;">
-                                <a class="nav-link disabled text-white-50 rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
-                                    N/A
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <i class="fa-solid fa-xmark fa-xs float-start ms-2 text-white-50 d-none d-md-block"></i>
-                                    </div>
-                                </a>
-                            </li>
-                            <!-- <li class="nav-item border-end rounded">
-                                <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
-                            </li> -->
-                            <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
-                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
-                                 style="cursor: pointer;">
-                                    <i class="fa-solid fa-window-minimize fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
-                                    style="color: #ffffff;"></i>
-                                </li>
-                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
-                                 style="cursor: pointer;">
-                                    <i class="fa-solid fa-window-restore fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
-                                    style="color: #ffffff;"></i>
-                                </li>
-                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
-                                 style="cursor: pointer; background-color: #e04a4a;">
-                                    <i class="fa-solid fa-xmark fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
-                                    style="color: #ffffff;"></i>
-                                </li>
-                            </div>
-                            
-                        </ul>
-                    </div>
+<div class="container" style="margin-top: 5rem;" style="height:100%;">
+
     
-                    <div class="tab-content mt-0 p-0 p-md-3 pt-1 border-top border-2" style="color:#c1ddee;">
-                        <div id="work-UHM" class="container tab-pane active"><br>
-                            <h5 class="work-title"><strong>Web Developer - Korean Flagship Center</strong></h5>
-                            <p class="responsive-text"><em>September 2023 - Present</em></p>
-                            <ul class="list-unstyled responsive-text">
-                                <li class="">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                    Implemented updates and additions to the company website using SFTP and WordPress, ensuring seamless user experiences and keeping the online presence current and dynamic.
-                                    <br><br>
-                                </li>
-                                <li class="">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                    Developed a web application that automates the creation of decision letters for student applicants. 
-                                    This user-friendly tool generates official decision letters with branded letterhead in PDF format, facilitating a swift and professional communication process with applicants.
-                                    <br><br>
-                                </li>
-                                <li class="">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                    Successfully rebuilt the organization's application form through integration with a third-party software, streamlining the submission process for applicants. 
-                                    This enhancement contributed to increased efficiency and a more user-friendly application experience.
-                                </li>
-                              </ul>
+    <h2 class="text-center mb-4 moving-gradient-header">
+        <strong>Work</strong>
+    </h2>
+    <div class="d-flex justify-content-center m-0 m-md-1 p-0 p-md-1">
+        <div class="d-flex flex-column work-container border border-2 rounded rounded-3" style="max-width: 70%;">
+            <div>
+                <ul class="nav nav-tabs d-flex" style="font-size: 1.4rem; border-bottom:0;" role="tablist">
+                    <li class="nav-item flex-grow-1 flex-sm-grow-0" style="cursor: pointer;">
+                    <a class="nav-link active text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
+                        <strong>University of Hawaii</strong>
+                        <div class="d-flex flex-column justify-content-center">
+                            <i class="fa-solid fa-xmark fa-xs float-start ms-2 d-none d-md-block" style="color: #ffffff;"></i>
                         </div>
-                        <div id="work-na" class="container tab-pane fade"><br>
-                            <ul class="list-unstyled">
-                                <li class="">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                      Item 1
-                                </li>
-                                <li class="">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                      Item 1
-                                </li>
-                                <li class="">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                      Item 1
-                                </li>
-                              </ul>
-                        </div>
+                    </a>
+                    </li>
+                    <li class="nav-item border-end rounded flex-grow-1 flex-sm-grow-0" style="cursor: pointer;">
+                        <a class="nav-link disabled text-white-50 rounded-end tab-text d-flex" data-bs-toggle="tab" href="#work-UHM">
+                            N/A
+                            <div class="d-flex flex-column justify-content-center">
+                                <i class="fa-solid fa-xmark fa-xs float-start ms-2 text-white-50 d-none d-md-block"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item border-end rounded">
+                        <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
+                    </li> -->
+                    <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
+                        <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                            style="cursor: pointer;">
+                            <i class="fa-solid fa-window-minimize fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                            style="color: #ffffff;"></i>
+                        </li>
+                        <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                            style="cursor: pointer;">
+                            <i class="fa-solid fa-window-restore fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                            style="color: #ffffff;"></i>
+                        </li>
+                        <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                            style="cursor: pointer; background-color: #e04a4a;">
+                            <i class="fa-solid fa-xmark fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                            style="color: #ffffff;"></i>
+                        </li>
                     </div>
-                  </div>
+                    
+                </ul>
+            </div>
+
+            <div class="tab-content mt-0 p-0 p-md-3 pt-1 border-top border-2" style="color:#c1ddee;">
+                <div id="work-UHM" class="container tab-pane active"><br>
+                    <h5 class="work-title"><strong>Web Developer - Korean Flagship Center</strong></h5>
+                    <p class="responsive-text"><em>September 2023 - Present</em></p>
+                    <ul class="list-unstyled responsive-text">
+                        <li class="">
+                            <i class="fa-solid fa-angles-right"></i>
+                            Implemented updates and additions to the company website using SFTP and WordPress, ensuring seamless user experiences and keeping the online presence current and dynamic.
+                            <br><br>
+                        </li>
+                        <li class="">
+                            <i class="fa-solid fa-angles-right"></i>
+                            Developed a web application that automates the creation of decision letters for student applicants. 
+                            This user-friendly tool generates official decision letters with branded letterhead in PDF format, facilitating a swift and professional communication process with applicants.
+                            <br><br>
+                        </li>
+                        <li class="">
+                            <i class="fa-solid fa-angles-right"></i>
+                            Successfully rebuilt the organization's application form through integration with a third-party software, streamlining the submission process for applicants. 
+                            This enhancement contributed to increased efficiency and a more user-friendly application experience.
+                        </li>
+                        </ul>
+                </div>
+                <div id="work-na" class="container tab-pane fade"><br>
+                    <ul class="list-unstyled">
+                        <li class="">
+                            <i class="fa-solid fa-angles-right"></i>
+                                Item 1
+                        </li>
+                        <li class="">
+                            <i class="fa-solid fa-angles-right"></i>
+                                Item 1
+                        </li>
+                        <li class="">
+                            <i class="fa-solid fa-angles-right"></i>
+                                Item 1
+                        </li>
+                        </ul>
                 </div>
             </div>
-           
-      </section>
+            </div>
+        </div>
+    </div>
+    
+</section>
 
       
-      <section class="top-5">
-        
-        <div class="container" style="margin-top: 5rem;" style="height:100%;">
-            
-            <h2 class="text-center mb-4 moving-gradient-header" style="">
-                <strong>Projects</strong>
-            </h2>
+<section class="top-5">
 
-            
-            <div class="d-flex justify-content-center p-1">
-                <div class="d-flex flex-column work-container border border-2 rounded rounded-3" style="max-width: 100%;">
-                    <div>
-                        <ul id="vscode-top" class="nav nav-tabs d-flex" style="font-size: 0.8rem; border-bottom:0;" role="tablist">
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 ">
-                                    <i class="fa-solid fa-code"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <p class="nav-link text-white rounded-end pe-2 ps-2 ">
-                                    File
-                                </p>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 ">
-                                    Edit
-                                </a>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 ">
-                                    Selection
-                                </a>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 ">
-                                    View
-                                </a>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
-                                    Go
-                                </a>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
-                                    Run
-                                </a>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
-                                    Terminal
-                                </a>
-                            </li>
-                            <li class="nav-item" style="cursor: pointer;">
-                                <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
-                                    Help
-                                </a>
-                            </li>
-                            <!-- <li class="nav-item border-end rounded">
-                                <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
-                            </li> -->
-                            <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
-                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
-                                 style="cursor: pointer;">
-                                    <i class="fa-solid fa-window-minimize fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
-                                    style="color: #ffffff;"></i>
-                                </li>
-                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
-                                 style="cursor: pointer;">
-                                    <i class="fa-solid fa-window-restore fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
-                                    style="color: #ffffff;"></i>
-                                </li>
-                                <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
-                                 style="cursor: pointer; background-color: #e04a4a;">
-                                    <i class="fa-solid fa-xmark fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
-                                    style="color: #ffffff;"></i>
-                                </li>
-                            </div>
+<div class="container" style="margin-top: 2rem;" style="height:100%;">
+    
+    <h2 class="text-center mb-4 moving-gradient-header" style="">
+        <strong>Projects</strong>
+    </h2>
+
+    
+    <div class="d-flex justify-content-center p-1">
+        <div class="d-flex flex-column work-container border border-2 rounded rounded-3" style="max-width: 80%;">
+            <div>
+                <ul id="vscode-top" class="nav nav-tabs d-flex" style="font-size: 0.8rem; border-bottom:0;" role="tablist">
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 ">
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <p class="nav-link text-white rounded-end pe-2 ps-2 ">
+                            File
+                        </p>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 ">
+                            Edit
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 ">
+                            Selection
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 ">
+                            View
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
+                            Go
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
+                            Run
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
+                            Terminal
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;">
+                        <a class="nav-link text-white rounded-end pe-2 ps-2 d-none d-sm-block">
+                            Help
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item border-end rounded">
+                        <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
+                    </li> -->
+                    <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
+                        <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                            style="cursor: pointer;">
+                            <i class="fa-solid fa-window-minimize fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                            style="color: #ffffff;"></i>
+                        </li>
+                        <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                            style="cursor: pointer;">
+                            <i class="fa-solid fa-window-restore fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                            style="color: #ffffff;"></i>
+                        </li>
+                        <li class="d-flex flex-column justify-content-center border-start rounded-top rounded-start"
+                            style="cursor: pointer; background-color: #e04a4a;">
+                            <i class="fa-solid fa-xmark fa-sm float-start m-2 me-3 ms-3 d-none d-md-block" 
+                            style="color: #ffffff;"></i>
+                        </li>
+                    </div>
+                    
+                </ul>
+
+                <div class="d-flex">
+                    <ul id="vscode-side" class="nav nav-tabs d-flex flex-column text-white p-3 d-none d-sm-block" style="font-size: 1.1rem; border-bottom:0;" role="tablist">
+                        <li class="nav-item mt-2" style="cursor: pointer;">
+                            <i class="fa-solid fa-file"></i>
+                        </li>
+                        <li class="nav-item mt-3" style="cursor: pointer;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                        <li class="nav-item mt-3" style="cursor: pointer;">
+                            <i class="fa-solid fa-code-branch"></i>
+                        </li>
+                        <li class="nav-item mt-3" style="cursor: pointer;">
+                            <i class="fa-solid fa-bug"></i>
+                        </li>
+                        <li class="nav-item mt-3" style="cursor: pointer;">
+                            <i class="fa-regular fa-square-plus"></i>
+                        </li>
+                        <!-- <li class="nav-item border-end rounded">
+                            <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
+                        </li> -->
+                        <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
                             
-                        </ul>
-
-                        <div class="d-flex">
-                            <ul id="vscode-side" class="nav nav-tabs d-flex flex-column text-white p-3 d-none d-sm-block" style="font-size: 1.1rem; border-bottom:0;" role="tablist">
-                                <li class="nav-item mt-2" style="cursor: pointer;">
-                                    <i class="fa-solid fa-file"></i>
+                            
+                        </div>
+                        
+                    </ul>
+                    <div class="d-flex flex-column work-container border border-1 rounded rounded-3 rounded-end-0 m-0" style="">
+                        <div>
+                            <ul class="nav nav-tabs d-flex" style="border-bottom:0;" role="tablist">
+                                <li class="nav-item" style="cursor: pointer;">
+                                <a class="nav-link active text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#projects-worddough" style="font-size: 1.1rem; ">
+                                    <strong>Word Dough</strong>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <i class="fa-solid fa-xmark fa-xs float-start ms-2" style="color: #ffffff;"></i>
+                                    </div>
+                                </a>
                                 </li>
-                                <li class="nav-item mt-3" style="cursor: pointer;">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </li>
-                                <li class="nav-item mt-3" style="cursor: pointer;">
-                                    <i class="fa-solid fa-code-branch"></i>
-                                </li>
-                                <li class="nav-item mt-3" style="cursor: pointer;">
-                                    <i class="fa-solid fa-bug"></i>
-                                </li>
-                                <li class="nav-item mt-3" style="cursor: pointer;">
-                                    <i class="fa-regular fa-square-plus"></i>
+                                <li class="nav-item border-end rounded" style="cursor: pointer;">
+                                    <a class="nav-link disabled text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#projects-kumaprints" style="font-size: 1.1rem; ">
+                                        N/A
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <i class="fa-solid fa-xmark fa-xs float-start ms-2 text-white-50"></i>
+                                        </div>
+                                    </a>
                                 </li>
                                 <!-- <li class="nav-item border-end rounded">
                                     <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
                                 </li> -->
                                 <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
                                     
-                                    
                                 </div>
                                 
                             </ul>
-                            <div class="d-flex flex-column work-container border border-1 rounded rounded-3 rounded-end-0 m-0" style="">
-                                <div>
-                                    <ul class="nav nav-tabs d-flex" style="font-size: 1.rem; border-bottom:0;" role="tablist">
-                                        <li class="nav-item" style="cursor: pointer;">
-                                        <a class="nav-link active text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#projects-worddough">
-                                            <strong>Word Dough</strong>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <i class="fa-solid fa-xmark fa-xs float-start ms-2" style="color: #ffffff;"></i>
-                                            </div>
-                                        </a>
-                                        </li>
-                                        <li class="nav-item border-end rounded" style="cursor: pointer;">
-                                            <a class="nav-link text-white rounded-end tab-text d-flex" data-bs-toggle="tab" href="#projects-kumaprints">
-                                                N/A
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <i class="fa-solid fa-xmark fa-xs float-start ms-2 text-white-50"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <!-- <li class="nav-item border-end rounded">
-                                            <a class="nav-link text-white-50 disabled rounded-end tab-text" data-bs-toggle="tab" href="#work-na">N/A</a>
-                                        </li> -->
-                                        <div class="nav-item rounded flex-grow-1 d-flex justify-content-end">
-                                            
-                                        </div>
-                                        
-                                    </ul>
-                                </div>
-            
-                                <div class="tab-content mt-0 p-1 border-top border-2" style="color:#c1ddee;">
-                                    <div id="projects-worddough" class="container tab-pane active"><br>
-                                        <h5 class="work-title"><strong></strong></h5>
-                                        <p class="responsive-text"><em>September 2023 - Present</em></p>
-                                        <ul class="list-unstyled responsive-text">
-                                            <li class="">
-                                                <i class="fa-solid fa-angles-right"></i>
-                                                Implemented updates and additions to the company website using SFTP and WordPress, ensuring seamless user experiences and keeping the online presence current and dynamic.
-                                                <br><br>
-                                            </li>
-                                            <li class="">
-                                                <i class="fa-solid fa-angles-right"></i>
-                                                Developed a web application that automates the creation of decision letters for student applicants. 
-                                                This user-friendly tool generates official decision letters with branded letterhead in PDF format, facilitating a swift and professional communication process with applicants.
-                                                <br><br>
-                                            </li>
-                                            <li class="">
-                                                <i class="fa-solid fa-angles-right"></i>
-                                                Successfully rebuilt the organization's application form through integration with a third-party software, streamlining the submission process for applicants. 
-                                                This enhancement contributed to increased efficiency and a more user-friendly application experience.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div id="projects-kumaprints" class="container tab-pane fade"><br>
-                                        <ul class="list-unstyled">
-                                            <li class="">
-                                                <i class="fa-solid fa-angles-right"></i>
-                                                Item 1
-                                            </li>
-                                            <li class="">
-                                                <i class="fa-solid fa-angles-right"></i>
-                                                Item 1
-                                            </li>
-                                            <li class="">
-                                                <i class="fa-solid fa-angles-right"></i>
-                                                Item 1
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
                         </div>
-                        
-                    </div>
-                    
-                    </div>
-            
+    
+                        <div class="tab-content mt-0 p-1 border-top border-2" style="color:#c1ddee;">
+                            <div id="projects-worddough" class="container tab-pane active"><br>
+                                <!-- <h5 class="work-title"><strong></strong></h5> -->
+                                <!-- Carousel -->
+                                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                                    <!-- Indicators/dots -->
+                                    <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                                    </div>
+                                    
+                                    <!-- The slideshow/carousel -->
+                                    <div class="carousel-inner rounded-3">
+                                    <div class="carousel-item active">
+                                        <img src="/images/Word-Dough.png" alt="Word Dough Main Page" class="d-block" style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/images/Leaderboard.png" alt="Word Dough Leaderboard" class="d-block" style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/images/Login.png" alt="Word Dough Login" class="d-block" style="width:100%;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/images/Register.png" alt="Word Dough Register" class="d-block" style="width:100%">
+                                    </div>
+                                    </div>
+                                    
+                                    <!-- Left and right controls/icons -->
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                    </button>
+                                </div>
+                                <p class="responsive-text mt-3">
+                                    <strong>Tech Stack - HTML, CSS, JavaScript, JQuery, Bootstrap 5, Php, MySQL</strong>
+                                </p>
+                                <ul class="list-unstyled responsive-text">
+                                    <li class="mt-1">
+                                        <i class="fa-solid fa-angles-right"></i>
+
+                                    </li>
+                                    <li class="mt-3">
+                                        <i class="fa-solid fa-angles-right"></i>
+                                        Developed a web application that automates the creation of decision letters for student applicants. 
+                                        This user-friendly tool generates official decision letters with branded letterhead in PDF format, facilitating a swift and professional communication process with applicants.
+                                    </li>
+                                    <li class="mt-3">
+                                        <i class="fa-solid fa-angles-right"></i>
+                                        Successfully rebuilt the organization's application form through integration with a third-party software, streamlining the submission process for applicants. 
+                                        This enhancement contributed to increased efficiency and a more user-friendly application experience.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="projects-kumaprints" class="container tab-pane fade"><br>
+                                <ul class="list-unstyled">
+                                    <li class="">
+                                        <i class="fa-solid fa-angles-right"></i>
+                                        Item 1
+                                    </li>
+                                    <li class="">
+                                        <i class="fa-solid fa-angles-right"></i>
+                                        Item 1
+                                    </li>
+                                    <li class="">
+                                        <i class="fa-solid fa-angles-right"></i>
+                                        Item 1
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                 </div>
+                
             </div>
-           
-      </section>
+            
+            </div>
+    
+        </div>
+    </div>
+    
+</section>
 
 
 
