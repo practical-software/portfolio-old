@@ -1020,17 +1020,16 @@
                                 <ul class="list-unstyled responsive-text">
                                     <li class="mt-1">
                                         <i class="fa-solid fa-angles-right"></i>
-
+                                        A revemaped competitive version of New York Times' viral "Wordle" game with an added login, registration, and leaderboard system. 
                                     </li>
                                     <li class="mt-3">
                                         <i class="fa-solid fa-angles-right"></i>
-                                        Developed a web application that automates the creation of decision letters for student applicants. 
-                                        This user-friendly tool generates official decision letters with branded letterhead in PDF format, facilitating a swift and professional communication process with applicants.
+                                        Word Dough uses the Merriam-Webster Dictionary API to verify the validity of the user-inputted word
+                                        and OpenAI's Moderation API to keep player's usernames appropriate.
                                     </li>
                                     <li class="mt-3">
                                         <i class="fa-solid fa-angles-right"></i>
-                                        Successfully rebuilt the organization's application form through integration with a third-party software, streamlining the submission process for applicants. 
-                                        This enhancement contributed to increased efficiency and a more user-friendly application experience.
+                                        
                                     </li>
                                 </ul>
                             </div>
@@ -1089,7 +1088,7 @@
             await new Promise(function (resolve) {
                 setTimeout(function () {
                 resolve();
-                }, 100);
+                }, 120);
             });
 
             
@@ -1131,7 +1130,7 @@
                     if (!famToggled) {$("#familiar").fadeIn();}
                     famToggled = true;
                 }
-                if ($(this).scrollTop() >= 1600) {
+                if ($(this).scrollTop() >= 1400) {
                     // Your code to run when scrolled to the desired point
                     //console.log("Scrolled to the desired point!3");
                     // You can also add your code here to manipulate the targeted element
@@ -1189,7 +1188,7 @@
         $("#nav-projects").click(function(){
             var navbarHeight = (window.innerWidth<768) ? 84 : $("#my-navbar").height();
             $('html, body').animate({
-                scrollTop: ($(".projects-back").offset().top - navbarHeight)
+                scrollTop: ($(".top-5").offset().top - navbarHeight)
             }, 1000);
         });
 
